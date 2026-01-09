@@ -1,0 +1,95 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Docker
+docker-compose.override.yml
+
+# Data
+data/raw/*.csv
+data/raw/*.json
+data/raw/*.parquet
+data/processed/*
+!data/processed/.gitkeep
+
+# Models
+ml-models/models/*.pkl
+ml-models/models/*.h5
+ml-models/models/*.pt
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Monitoring
+monitoring/prometheus/data/
+monitoring/grafana/data/
+
+# Airflow
+airflow/logs/
+airflow/*.db
+airflow/*.pid
+
+# Test coverage
+htmlcov/
+.coverage
+.pytest_cache/
+
+# MinIO data
+minio-data/
+
+# Maven/Java
+spring-boot-producers/**/target/
+spring-boot-producers/**/.mvn/
+spring-boot-producers/**/mvnw
+spring-boot-producers/**/mvnw.cmd
+spring-boot-producers/**/*.iml
+spring-boot-producers/**/.classpath
+spring-boot-producers/**/.project
+spring-boot-producers/**/.settings/
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log
