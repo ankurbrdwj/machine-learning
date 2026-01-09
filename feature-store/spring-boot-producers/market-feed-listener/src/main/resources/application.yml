@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: market-feed-listener
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+# Market Feed Configuration
+market:
+  feed:
+    websocket:
+      url: ws://localhost:9090  # Stock market simulator WebSocket URL
+    enabled: true
+    reconnect:
+      delay: 5000  # Reconnect delay in milliseconds
+
+# Kafka Topics
+kafka:
+  topic:
+    quotes: market-quotes
+    instruments: market-instruments
+
+# Logging
+logging:
+  level:
+    root: INFO
+    com.featurestore.market: DEBUG
+    org.springframework.kafka: INFO
+    org.apache.kafka: WARN
+
+# Actuator endpoints (health checks)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+server:
+  port: 8081
